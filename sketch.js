@@ -7,8 +7,11 @@ function draw() {
   background(220);
   const CELLSIZE = 20;
   noStroke();
-  for(let x = 0; x < width; x += CELLSIZE){
-    fill(random(255))
-    rect(x, 0, CELLSIZE)
+  for (let y = 0; y < height; y += CELLSIZE) {
+    for (let x = 0; x < width; x += CELLSIZE) {
+      fill(random(255))
+      rect(x, y, CELLSIZE)
+    }
   }
+
 }
