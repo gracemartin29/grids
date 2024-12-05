@@ -1,5 +1,5 @@
 const CELLSIZES = [50, 100, 150];
-const COLOURS = ["#C71585", "#483D8B", "#B0E0E6", "#333333", "#E6E6FA"]
+const COLOURS = ["#C71585", "#483D8B", "#B0E0E6", "#8B0000", "#E6E6FA"]
 
 function setup() {
   createCanvas(800, 600);
@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
   background(0);
-  noStroke();
+  // noStroke();
   // basic grid
   /*const CELLSIZE = 20;
   for (let y = 0; y < height; y += CELLSIZE) {
