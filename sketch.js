@@ -1,5 +1,5 @@
 const CELLSIZES = [50, 100, 150];
-const COLOURS = ["#C71585", "#483D8B", "#B0E0E6", "#000000", "#E6E6FA"]
+const COLOURS = ["#C71585", "#483D8B", "#B0E0E6", "#333333", "#E6E6FA"]
 
 function setup() {
   createCanvas(800, 600);
@@ -7,8 +7,8 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  // noStroke();
+  background(0);
+  noStroke();
   // basic grid
   /*const CELLSIZE = 20;
   for (let y = 0; y < height; y += CELLSIZE) {
@@ -38,11 +38,15 @@ function draw() {
   }*/
 
   // grid of shapes
+  const ARCVALUES = [PI/2, PI, PI + PI/2, 2*PI]
   const CELLSIZE = 50;
   for (let y = 0; y < height; y += CELLSIZE) {
     for (let x = 0; x < width; x += CELLSIZE) {
-      fill(random(255))
-      rect(x, y, CELLSIZE)
+      fill(random(COLOURS))
+      arc(x + CELLSIZE/2, y + CELLSIZE/2, CELLSIZE, CELLSIZE, 0, random(ARCVALUES))
+      fill(random(COLOURS))
+      arc(x + CELLSIZE/2, y + CELLSIZE/2, CELLSIZE/2, CELLSIZE/2, 0, random(ARCVALUES))
+
     }
   }
 }
